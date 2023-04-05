@@ -1,0 +1,38 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    "group:recommended",
+    "group:test",
+    "group:all",
+    ":disableMajorUpdates",
+    "docker:enableMajor"
+  ],
+  "prHourlyLimit": 0,
+  "assignAutomerge": true,
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch",
+        "pin",
+        "digest",
+        "pinDigest"
+      ],
+      "automerge": true,
+      "automergeType": "pr",
+      "platformAutomerge": true
+    }
+  ],
+  "timezone": "Europe/Warsaw",
+  "platformAutomerge": true,
+  "dockerfile": {
+    "fileMatch": [
+      ".*[dD]ockerfile.*"
+    ]
+  },
+  "docker": {
+    "pinDigests": true
+  }
+}
