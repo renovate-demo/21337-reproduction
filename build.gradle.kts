@@ -6,3 +6,7 @@ plugins {
     id("org.jetbrains.kotlin.jvm") version ("1.7.20")
     id("org.jetbrains.kotlin.plugin.spring") version ("1.7.20")
 }
+
+dependencies {
+    implementation("software.amazon.awssdk:s3:2.19.10")
+}
